@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Truck, Users, Clock, BarChart3, CheckCircle, Shield, Zap, Phone, Mail, Menu, X, Eye, EyeOff } from 'lucide-react';
-
+import Board from './DashboardPage'
 const HomePage = () => {
   const [currentPage, setCurrentPage] = useState('home');
   const [showPassword, setShowPassword] = useState(false);
@@ -377,50 +377,12 @@ const HomePage = () => {
     </div>
   );
 
-  // Dashboard Page
-  const DashboardPage = () => (
-    <div className="min-h-screen bg-gray-100">
-      <div className="bg-blue-900 text-white p-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Task Manager Dashboard</h1>
-          <button 
-            onClick={() => setCurrentPage('home')}
-            className="bg-blue-700 hover:bg-blue-600 px-4 py-2 rounded-lg transition"
-          >
-            Back to Home
-          </button>
-        </div>
-      </div>
-      <div className="p-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Welcome to Your Dashboard</h2>
-            <p className="text-gray-600 mb-8">
-              This is where your main task management application would be loaded. 
-              Here you can manage drivers, assign tasks, track progress, and analyze performance.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-blue-50 rounded-lg p-6 hover:shadow-lg transition cursor-pointer">
-                <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Manage Drivers</h3>
-                <p className="text-gray-600 text-sm">Add, edit, and track your driver profiles</p>
-              </div>
-              <div className="bg-green-50 rounded-lg p-6 hover:shadow-lg transition cursor-pointer">
-                <CheckCircle className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Assign Tasks</h3>
-                <p className="text-gray-600 text-sm">Create and assign tasks to your drivers</p>
-              </div>
-              <div className="bg-purple-50 rounded-lg p-6 hover:shadow-lg transition cursor-pointer">
-                <BarChart3 className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">View Analytics</h3>
-                <p className="text-gray-600 text-sm">Track performance and generate reports</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+// Dashboard Page
+const DashboardPage = () => (
+  <>
+  <Board/>
+  </>
+);
 
   // Features Page
   const FeaturesPage = () => (
